@@ -1,0 +1,17 @@
+{
+  "run_list":[
+    "yum",
+    "nginx",
+    "base",
+    "logrotate",
+    "ruby",
+    "recipe[mysql::client]"
+  ],
+  "mysql":{
+  "version": "5.6",
+  "port": "3306",
+  "server_root_password": "",
+  "remove_anonymous_users": true,
+  "remove_test_database": true
+  }
+}
